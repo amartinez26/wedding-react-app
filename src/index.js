@@ -1,10 +1,10 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-
-function Greeting() {
-  return <h2>wedding app boilerplate</h2>
-}
+import './index.css'
+import App from './App'
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
 
-root.render(<Greeting />)
+root.render(
+  <App />
+);
