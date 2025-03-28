@@ -8,7 +8,8 @@
  * @param {number} props.ariaValue - The current value of the progress bar for accessibility.
  * @returns {JSX.Element} The rendered SkillItem component.
  */
-import React from 'react'
+import React from 'react';
+import '../../assets/css/main.css'; // Import the CSS file containing the styles
 
 const SkillItem = ({ name, value, ariaValue }) => {
   return (
@@ -16,7 +17,7 @@ const SkillItem = ({ name, value, ariaValue }) => {
       <span className="skill">
         <span>{name}</span> <i className="val">{value}%</i>
       </span>
-      <div className="progress-bar-wrap">
+      <div className="skills progress-bar-wrap">
         <div
           className="progress-bar"
           role="progressbar"
@@ -27,7 +28,7 @@ const SkillItem = ({ name, value, ariaValue }) => {
         ></div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default SkillItem
+export default SkillItem;

@@ -14,9 +14,15 @@
  * 
  * @returns {JSX.Element} A JSX element representing a statistics item.
  */
-import React from 'react'
+import React, { useEffect } from 'react'
+import PureCounter from '@srexi/purecounterjs' // Import PureCounter
 
 const StatsItem = ({ icon, endValue, title, subtitle }) => {
+  useEffect(() => {
+    // Initialize PureCounter
+    new PureCounter()
+  }, [])
+
   return (
     <div className="col-lg-3 col-md-6">
       <div className="stats-item">

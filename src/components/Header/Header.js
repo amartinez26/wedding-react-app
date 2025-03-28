@@ -10,6 +10,7 @@ import ProfileImage from './ProfileImage'; // Ensure this path is correct
 import Logo from './Logo';
 import SocialLinks from './SocialLinks';
 import NavMenu from './NavMenu';
+import profileImg from '../../assets/img/my-profile-img.jpg' 
 
 const Header = () => {
   const socialLinks = [
@@ -54,12 +55,12 @@ const Header = () => {
   return (
     <header id="header" className="header dark-background d-flex flex-column">
       <i className="header-toggle d-xl-none bi bi-list"></i>
-      <ProfileImage src="assets/img/my-profile-img.jpg" alt="Profile" />
+      <ProfileImage src={profileImg} alt="Profile" />
       <Logo siteName="Antonio Martinez" />
       <SocialLinks links={socialLinks} />
       <NavMenu menuItems={menuItems} />
     </header>
-  );
+  )
 };
 
 export default Header;

@@ -11,10 +11,12 @@
 import React from 'react'
 import HeroImage from './HeroImage'
 import HeroTitle from './HeroTitle'
+import heroBg from '../../assets/img/hero-bg.jpg'; // Adjust the path as needed
+
 
 const Hero = () => {
   const heroImage = {
-    src: 'assets/img/hero-bg.jpg',
+    src: heroBg,
     alt: 'Hero Background',
     aos: 'fade-in',
   }

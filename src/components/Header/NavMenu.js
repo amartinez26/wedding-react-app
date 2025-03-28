@@ -30,6 +30,7 @@
  * />
  */
 import React from 'react'
+import {Link} from 'react-router-dom'
 
 const NavMenu = ({ menuItems }) => {
   return (
@@ -37,12 +38,12 @@ const NavMenu = ({ menuItems }) => {
       <ul>
         {menuItems.map((item, index) => (
           <li key={index} className={item.dropdown ? 'dropdown' : ''}>
-            <a href={item.href}>
+            <Link to={item.href}>
               <i className={item.icon}></i> {item.label}
               {item.dropdown && (
                 <i className="bi bi-chevron-down toggle-dropdown"></i>
               )}
-            </a>
+            </Link>
             {item.dropdown && (
               <ul>
                 {item.dropdown.map((subItem, subIndex) => (
@@ -50,12 +51,12 @@ const NavMenu = ({ menuItems }) => {
                     key={subIndex}
                     className={subItem.dropdown ? 'dropdown' : ''}
                   >
-                    <a href={subItem.href}>{subItem.label}</a>
+                    <Link to={subItem.href}>{subItem.label}</Link>
                     {subItem.dropdown && (
                       <ul>
                         {subItem.dropdown.map((deepItem, deepIndex) => (
                           <li key={deepIndex}>
-                            <a href={deepItem.href}>{deepItem.label}</a>
+                            <Link to={deepItem.href}>{deepItem.label}</Link>
                           </li>
                         ))}
                       </ul>
@@ -71,4 +72,4 @@ const NavMenu = ({ menuItems }) => {
   )
 }
 
-export default NavMenu 
+export default NavMenu
