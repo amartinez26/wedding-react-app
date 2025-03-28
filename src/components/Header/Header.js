@@ -1,3 +1,10 @@
+
+/**
+ * @file Header.js
+ * @description This file defines the `Header` component, which serves as the main header section of the application. 
+ * It includes a profile image, site logo, social media links, and a navigation menu with support for dropdowns.
+ * The component is designed to be responsive and adaptable to different screen sizes.
+ */
 import React from 'react';
 import ProfileImage from './ProfileImage'; // Ensure this path is correct
 import Logo from './Logo';

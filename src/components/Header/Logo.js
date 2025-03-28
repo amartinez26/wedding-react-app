@@ -1,3 +1,10 @@
+
+/**
+ * @file Logo.js
+ * @description This file defines the Logo component, which renders a clickable logo element
+ *              for the application. The logo can optionally include an image and displays
+ *              the site name passed as a prop.
+ */
 import React from 'react'
 
 const Logo = ({ siteName }) => {
