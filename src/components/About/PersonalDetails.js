@@ -23,7 +23,7 @@ const PersonalDetails = ({ details }) => {
           </ul>
         </div>
       ))}
-      <p class="py-3">
+      <p className="py-3">
         Officiis eligendi itaque labore et dolorum mollitia officiis optio vero.
         Quisquam sunt adipisci omnis et ut. Nulla accusantium dolor incidunt
         officia tempore. Et eius omnis. Cupiditate ut dicta maxime officiis

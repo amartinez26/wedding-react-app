@@ -1,4 +1,3 @@
-
 /**
  * SkillItem component displays a skill with its name, value, and a progress bar.
  *
@@ -11,24 +10,19 @@
 import React from 'react';
 import '../../assets/css/main.css'; // Import the CSS file containing the styles
 
-const SkillItem = ({ name, value, ariaValue }) => {
+const SkillItem = ({ name, value }) => {
   return (
-    <div className="progress">
-      <span className="skill">
-        <span>{name}</span> <i className="val">{value}%</i>
-      </span>
-      <div className="skills progress-bar-wrap">
+    <div className="skill">
+      <span className="skill-name">{name}<i className="val">{value}%</i></span>
+      <div className="progress">
         <div
           className="progress-bar"
-          role="progressbar"
-          aria-valuenow={ariaValue}
-          aria-valuemin="0"
-          aria-valuemax="100"
-          style={{ width: `${value}%` }}
+          style={{ width: '0%' }} // Start with 0% width for animation
+          data-value={value} // Custom attribute for animation
         ></div>
       </div>
     </div>
-  );
-};
+  )
+}
 
 export default SkillItem;

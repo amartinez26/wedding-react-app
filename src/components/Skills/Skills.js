@@ -14,7 +14,7 @@
  * @example
  * <Skills />
  */
-import React from 'react'
+import React, { useEffect } from 'react'
 import SectionTitle from '../Shared/SectionTitle'
 import SkillsColumn from './SkillsColumn'
 
@@ -26,16 +26,45 @@ const Skills = () => {
   }
 
   const leftColumnSkills = [
-    { name: 'HTML', value: 100 },
-    { name: 'CSS', value: 90 },
-    { name: 'JavaScript', value: 75 },
+    { name: 'HTML ', value: 100 },
+    { name: 'CSS ', value: 90 },
+    { name: 'JavaScript ', value: 75 },
   ]
 
   const rightColumnSkills = [
-    { name: 'PHP', value: 80 },
-    { name: 'WordPress/CMS', value: 90 },
-    { name: 'Photoshop', value: 55 },
+    { name: 'PHP ', value: 80 },
+    { name: 'WordPress/CMS ', value: 90 },
+    { name: 'Photoshop ', value: 55 },
   ]
+
+  useEffect(() => {
+    // Function to reset and trigger the progress bar animation
+    const handleAosAnimation = (event) => {
+      const triggeredElement = event.detail // The element that triggered the AOS event
+      console.log('AOS triggered:', triggeredElement)
+
+      // Find progress bars only within the triggered element
+      const progressBars = triggeredElement.querySelectorAll('.progress-bar')
+      progressBars.forEach((bar) => {
+        // Reset the width to 0 before triggering the animation
+        bar.style.width = '0%'
+
+        // Trigger the animation after a short delay
+        setTimeout(() => {
+          const value = bar.getAttribute('data-value')
+          bar.style.width = `${value}%`
+        }, 100) // Delay to allow the reset to take effect
+      })
+    }
+
+    // Listen for AOS events
+    document.addEventListener('aos:in', handleAosAnimation)
+
+    // Cleanup event listener on component unmount
+    return () => {
+      document.removeEventListener('aos:in', handleAosAnimation)
+    }
+  }, [])
 
   return (
     <section id="skills" className="skills section light-background">

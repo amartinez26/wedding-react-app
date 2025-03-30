@@ -12,7 +12,10 @@ import 'aos/dist/aos.css'; // Ensure AOS CSS is imported
 import './assets/css/main.css'
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
-AOS.init();
+AOS.init({
+  duration: 1000, // Animation duration
+  once: false, // Allow animations to trigger multiple times
+})
 root.render(
   <App />
 );

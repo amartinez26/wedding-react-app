@@ -1,28 +1,12 @@
 
-/**
- * Portfolio Component
- *
- * This component renders the Portfolio section of the application, which includes:
- * - A section title with a title and description.
- * - A set of portfolio filters to categorize portfolio items.
- * - A list of portfolio items displayed based on the selected filter.
- *
- * The component uses the following sub-components:
- * - `SectionTitle`: Displays the title and description of the section.
- * - `PortfolioFilters`: Displays filter buttons for categorizing portfolio items.
- * - `PortfolioItems`: Displays the portfolio items based on the selected filter.
- *
- * Data:
- * - `sectionTitle`: An object containing the title and description of the section.
- * - `filters`: An array of filter objects, each containing a filter key, label, and active state.
- * - `portfolioItems`: An array of portfolio item objects, each containing a filter key, image path, title, and description.
- *
- * @component
- */
-import React from 'react'
+import React, { useState } from 'react'
 import SectionTitle from '../Shared/SectionTitle'
 import PortfolioFilters from './PortfolioFilters'
 import PortfolioItems from './PortfolioItems'
+import app1Img from '../../assets/img/portfolio/app-1.jpg'
+import product1Img from '../../assets/img/portfolio/product-1.jpg'
+import branding1Img from '../../assets/img/portfolio/branding-1.jpg'
+import books1Img from '../../assets/img/portfolio/books-1.jpg'
 
 const Portfolio = () => {
   const sectionTitle = {
@@ -33,39 +17,52 @@ const Portfolio = () => {
 
   const filters = [
     { filter: '*', label: 'All', active: true },
-    { filter: '.filter-app', label: 'App' },
-    { filter: '.filter-product', label: 'Product' },
-    { filter: '.filter-branding', label: 'Branding' },
-    { filter: '.filter-books', label: 'Books' },
+    { filter: 'filter-app', label: 'App' },
+    { filter: 'filter-product', label: 'Product' },
+    { filter: 'filter-branding', label: 'Branding' },
+    { filter: 'filter-books', label: 'Books' },
   ]
 
   const portfolioItems = [
     {
       filter: 'filter-app',
-      img: 'assets/img/portfolio/app-1.jpg',
+      img: app1Img,
       title: 'App 1',
       description: 'Lorem ipsum, dolor sit amet consectetur',
     },
     {
       filter: 'filter-product',
-      img: 'assets/img/portfolio/product-1.jpg',
+      img: product1Img,
       title: 'Product 1',
       description: 'Lorem ipsum, dolor sit amet consectetur',
     },
     {
       filter: 'filter-branding',
-      img: 'assets/img/portfolio/branding-1.jpg',
+      img: branding1Img,
       title: 'Branding 1',
       description: 'Lorem ipsum, dolor sit amet consectetur',
     },
     {
       filter: 'filter-books',
-      img: 'assets/img/portfolio/books-1.jpg',
+      img: books1Img,
       title: 'Books 1',
       description: 'Lorem ipsum, dolor sit amet consectetur',
     },
-    // Add more items as needed
   ]
+
+  // State to track the active filter
+  const [activeFilter, setActiveFilter] = useState('*')
+
+  // Filtered portfolio items based on the active filter
+  const filteredItems =
+    activeFilter === '*'
+      ? portfolioItems
+      : portfolioItems.filter((item) => item.filter === activeFilter)
+
+  // Handle filter change
+  const handleFilterChange = (filter) => {
+    setActiveFilter(filter)
+  }
 
   return (
     <section id="portfolio" className="portfolio section light-background">
@@ -74,8 +71,11 @@ const Portfolio = () => {
         description={sectionTitle.description}
       />
       <div className="container">
-        <PortfolioFilters filters={filters} />
-        <PortfolioItems items={portfolioItems} />
+        <PortfolioFilters
+          filters={filters}
+          onFilterChange={handleFilterChange}
+        />
+        <PortfolioItems items={filteredItems} />
       </div>
     </section>
   )
