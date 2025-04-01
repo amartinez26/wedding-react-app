@@ -41,7 +41,6 @@ const Skills = () => {
     // Function to reset and trigger the progress bar animation
     const handleAosAnimation = (event) => {
       const triggeredElement = event.detail // The element that triggered the AOS event
-      console.log('AOS triggered:', triggeredElement)
 
       // Find progress bars only within the triggered element
       const progressBars = triggeredElement.querySelectorAll('.progress-bar')

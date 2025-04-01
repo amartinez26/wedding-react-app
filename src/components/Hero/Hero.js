@@ -23,7 +23,7 @@ const Hero = () => {
 
   const heroTitle = {
     name: 'Antonio Martinez',
-    typedItems: 'Designer, Developer, Freelancer, Photographer',
+    typedItems: 'Designer, Developer, Freelancer, Photographer, Const Soccer',
   }
 
   return (

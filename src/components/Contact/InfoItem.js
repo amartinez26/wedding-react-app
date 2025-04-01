@@ -19,12 +19,28 @@ import React from 'react'
 
 const InfoItem = ({ icon, title, content, delay }) => {
   return (
-    <div className="info-item d-flex" data-aos="fade-up" data-aos-delay={delay}>
-      <i className={`${icon} flex-shrink-0`}></i>
-      <div>
-        <h3>{title}</h3>
+    <div className="info-item" data-aos="fade-up" data-aos-delay={delay}>
+      <i className={icon}></i>
+      <h4>{title}</h4>
+      {title === 'Address' ? (
+        <div>
+          <p>{content}</p>
+          {/* Embed Google Map */}
+          <iframe
+            title="Google Map"
+            src={`https://www.google.com/maps/embed/v1/place?key=AIzaSyBbpDj0n3bkx0YBNwwyga5HkxXGUkHY0UE&q=${encodeURIComponent(
+              content
+            )}`}
+            width="100%"
+            height="200"
+            style={{ border: 0 }}
+            allowFullScreen=""
+            loading="lazy"
+          ></iframe>
+        </div>
+      ) : (
         <p>{content}</p>
-      </div>
+      )}
     </div>
   )
 }

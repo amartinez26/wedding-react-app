@@ -26,50 +26,78 @@
  *         { label: 'SEO', href: '/services/seo' }
  *       ]
  *     }
- *   ]}
+ *   ]}                   NOTE! DROPDOWNS ARE NOT WORKING YET need links
  * />
  */
-import React from 'react'
-import {Link} from 'react-router-dom'
+import React, { useState } from 'react'
 
-const NavMenu = ({ menuItems }) => {
-  return (
-    <nav id="navmenu" className="navmenu">
-      <ul>
-        {menuItems.map((item, index) => (
-          <li key={index} className={item.dropdown ? 'dropdown' : ''}>
-            <Link to={item.href}>
-              <i className={item.icon}></i> {item.label}
-              {item.dropdown && (
-                <i className="bi bi-chevron-down toggle-dropdown"></i>
-              )}
-            </Link>
+const NavMenu = ({ menuItems, isMenuOpen }) => {
+  const [openDropdowns, setOpenDropdowns] = useState({});
+
+  const handleScroll = (event, href) => {
+    event.preventDefault()
+
+    // Ignore invalid or placeholder hrefs like "#"
+    if (href === '#') {
+      console.log('Placeholder link clicked, href === # no action taken.')
+      return
+    };
+
+    const target = document.querySelector(href)
+    if (target) {
+      target.scrollIntoView({ behavior: 'smooth' })
+    } else {
+      console.warn(`No element found for selector: ${href}`)
+    }
+  };
+
+  const toggleDropdown = (index) => {
+    setOpenDropdowns((prev) => ({
+      ...prev,
+      [index]: !prev[index],
+    }))
+  };
+
+  const renderMenuItems = (items, parentIndex = '') => {
+    return items.map((item, index) => {
+      const currentIndex = `${parentIndex}${index}`
+      const isOpen = openDropdowns[currentIndex]
+
+      return (
+        <li key={currentIndex} className={item.dropdown ? 'dropdown' : ''}>
+          <a
+            href={item.href}
+            onClick={(e) => {
+              if (item.dropdown) {
+                e.preventDefault()
+                toggleDropdown(currentIndex)
+              } else {
+                handleScroll(e, item.href)
+              }
+            }}
+          >
+            <i className={item.icon}></i> {item.label}
             {item.dropdown && (
-              <ul>
-                {item.dropdown.map((subItem, subIndex) => (
-                  <li
-                    key={subIndex}
-                    className={subItem.dropdown ? 'dropdown' : ''}
-                  >
-                    <Link to={subItem.href}>{subItem.label}</Link>
-                    {subItem.dropdown && (
-                      <ul>
-                        {subItem.dropdown.map((deepItem, deepIndex) => (
-                          <li key={deepIndex}>
-                            <Link to={deepItem.href}>{deepItem.label}</Link>
-                          </li>
-                        ))}
-                      </ul>
-                    )}
-                  </li>
-                ))}
-              </ul>
+              <i
+                className={`bi ${
+                  isOpen ? 'bi-chevron-up' : 'bi-chevron-down'
+                } toggle-dropdown`}
+              ></i>
             )}
-          </li>
-        ))}
-      </ul>
+          </a>
+          {item.dropdown && isOpen && (
+            <ul>{renderMenuItems(item.dropdown, `${currentIndex}-`)}</ul>
+          )}
+        </li>
+      )
+    })
+  };
+
+  return (
+    <nav id="navmenu" className={`navmenu ${isMenuOpen ? 'menu-open' : ''}`}>
+      <ul>{renderMenuItems(menuItems)}</ul>
     </nav>
   )
-}
+};
 
 export default NavMenu
