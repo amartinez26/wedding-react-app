@@ -59,6 +59,10 @@ const Header = () => {
     setIsMenuOpen((prev) => !prev)
   };
 
+  const closeMenu = () => {
+    setIsMenuOpen(false)
+  }
+
   return (
     <header
       id="header"
@@ -82,7 +86,11 @@ const Header = () => {
       <SocialLinks links={socialLinks} />
 
       {/* Navigation Menu */}
-      <NavMenu menuItems={menuItems} isMenuOpen={isMenuOpen} />
+      <NavMenu
+        menuItems={menuItems}
+        isMenuOpen={isMenuOpen}
+        closeMenu={closeMenu}
+      />
     </header>
   )
 };

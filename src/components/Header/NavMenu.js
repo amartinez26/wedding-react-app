@@ -31,7 +31,7 @@
  */
 import React, { useState } from 'react'
 
-const NavMenu = ({ menuItems, isMenuOpen }) => {
+const NavMenu = ({ menuItems, isMenuOpen, closeMenu }) => {
   const [openDropdowns, setOpenDropdowns] = useState({});
 
   const handleScroll = (event, href) => {
@@ -46,6 +46,7 @@ const NavMenu = ({ menuItems, isMenuOpen }) => {
     const target = document.querySelector(href)
     if (target) {
       target.scrollIntoView({ behavior: 'smooth' })
+      closeMenu() // Close the menu after scrolling
     } else {
       console.warn(`No element found for selector: ${href}`)
     }
