@@ -10,7 +10,7 @@ import ProfileImage from './ProfileImage'; // Ensure this path is correct
 import Logo from './Logo';
 import SocialLinks from './SocialLinks';
 import NavMenu from './NavMenu';
-import profileImg from '../../assets/img/my-profile-img.jpg' 
+import profileImg from '../../assets/img/hands-vase.jpg' 
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false); // State to manage menu visibility
@@ -24,7 +24,7 @@ const Header = () => {
   ];
 
   const menuItems = [
-    { href: '#hero', icon: 'bi bi-house navicon', label: 'Home' },
+    { href: '#hero', icon: 'bi bi-house navicon', label: 'Top' },
     { href: '#about', icon: 'bi bi-person navicon', label: 'About' },
     {
       href: '#resume',
@@ -80,7 +80,7 @@ const Header = () => {
       <ProfileImage src={profileImg} alt="Profile" />
 
       {/* Logo */}
-      <Logo siteName="Antonio Martinez" />
+      <Logo siteName="Carla & Tony" />
 
       {/* Social Links */}
       <SocialLinks links={socialLinks} />

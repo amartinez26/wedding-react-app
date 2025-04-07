@@ -15,7 +15,8 @@ const Contact = () => {
     {
       icon: 'bi bi-geo-alt',
       title: 'Address',
-      content: 'A108 Adam Street, New York, NY 535022',
+      content:
+        'Privada, Supermanzana 11 Manzana 9 Lote 10, 77580 Puerto Morelos, Q.R., Mexico',
       delay: 200,
     },
     {

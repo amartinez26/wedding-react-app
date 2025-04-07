@@ -11,7 +11,7 @@
 import React from 'react'
 import HeroImage from './HeroImage'
 import HeroTitle from './HeroTitle'
-import heroBg from '../../assets/img/hero-bg.jpg'; // Adjust the path as needed
+import heroBg from '../../assets/img/running-mega-mall.jpg'; // Adjust the path as needed
 
 
 const Hero = () => {
@@ -22,8 +22,9 @@ const Hero = () => {
   }
 
   const heroTitle = {
-    name: 'Antonio Martinez',
-    typedItems: 'Designer, Developer, Freelancer, Photographer, Const Soccer',
+    name: 'More Than Just I Do...',
+    typedItems:
+      'Two Hearts, One Journey, A Vow to Eternity, With Love As Our Guide, And Forever As Our Destination',
   }
 
   return (

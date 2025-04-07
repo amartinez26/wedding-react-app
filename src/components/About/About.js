@@ -4,7 +4,7 @@ import React from 'react'
 import SectionTitle from '../Shared/SectionTitle'
 import ProfileImage from './ProfileImage'
 import AboutContent from './AboutContent'
-import myProfileImg from '../../assets/img/my-profile-img.jpg'
+import myProfileImg from '../../assets/img/profile-img.jpg'
 
 const About = () => {
   const sectionTitle = {

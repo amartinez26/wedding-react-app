@@ -42,7 +42,8 @@ const HeroTitle = ({ name, typedItems }) => {
     <div className="container" data-aos="fade-up" data-aos-delay="100">
       <h2>{name}</h2>
       <p>
-        I'm a <span ref={typedRef} className="typed"></span>
+        {/* You can add text that will be static here */}
+        <span ref={typedRef} className="typed"></span>
         <span
           ref={cursorRef}
           className="typed-cursor typed-cursor--blink"
