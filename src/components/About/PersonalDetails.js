@@ -24,10 +24,12 @@ const PersonalDetails = ({ details }) => {
         </div>
       ))}
       <p className="py-3">
-        Officiis eligendi itaque labore et dolorum mollitia officiis optio vero.
-        Quisquam sunt adipisci omnis et ut. Nulla accusantium dolor incidunt
-        officia tempore. Et eius omnis. Cupiditate ut dicta maxime officiis
-        quidem quia. Sed et consectetur qui quia repellendus itaque neque.
+        "And there you have it—some totally random, yet completely essential facts
+        about us. We hope this insider knowledge helps you feel even more
+        excited to celebrate with us in paradise. But let’s be real—if you miss
+        this wedding, you're cut off. Okay maybe not but you’ll regret it forever. FOMO doesn’t even begin to cover
+        it. So mark your calendars, move that savings to your checkings, and get ready for the biggest event
+        of 2026!"
       </p>
     </div>
   )

@@ -11,7 +11,7 @@
 import React from 'react'
 import HeroImage from './HeroImage'
 import HeroTitle from './HeroTitle'
-import heroBg from '../../assets/img/running-mega-mall.jpg'; // Adjust the path as needed
+import heroBg from '../../assets/img/portfolio/WeddingShoot/running-mega-mall.jpg' // Adjust the path as needed
 
 
 const Hero = () => {
@@ -22,9 +22,9 @@ const Hero = () => {
   }
 
   const heroTitle = {
-    name: 'More Than Just I Do...',
+    name: 'We\'ll say...',
     typedItems:
-      'Two Hearts, One Journey, A Vow to Eternity, With Love As Our Guide, And Forever As Our Destination',
+      'I do, and dance into forever, —where love begins, and happily ever after never ends.',
   }
 
   return (

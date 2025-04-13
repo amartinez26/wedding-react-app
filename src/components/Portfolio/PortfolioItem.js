@@ -18,7 +18,9 @@ import React from 'react'
 
 const PortfolioItem = ({ filter, img, title, description }) => {
   return (
-    <div className={`col-lg-4 col-md-6 portfolio-item isotope-item ${filter}`}>
+    <div
+      className={`col-lg-4 col-md-6 portfolio-item isotope-item portfolio-item img ${filter}`}
+    >
       <div className="portfolio-content h-100">
         <img src={img} className="img-fluid" alt={title} />
         <div className="portfolio-info">
@@ -32,13 +34,13 @@ const PortfolioItem = ({ filter, img, title, description }) => {
           >
             <i className="bi bi-zoom-in"></i>
           </a>
-          <a
+          {/* <a
             href="portfolio-details.html"
             title="More Details"
             className="details-link"
           >
             <i className="bi bi-link-45deg"></i>
-          </a>
+          </a> */}
         </div>
       </div>
     </div>

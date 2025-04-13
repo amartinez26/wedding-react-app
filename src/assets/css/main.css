@@ -809,6 +809,13 @@ section,
 /*--------------------------------------------------------------
 # Portfolio Section
 --------------------------------------------------------------*/
+.portfolio-item img {
+  max-height: 446.66px; /* Set the maximum height */
+  width: 100%; /* Ensures responsiveness */
+  object-fit: cover; /* Ensures the image fills the area without distortion */
+  border-radius: 8px; /* Optional: Adds rounded corners */
+}
+
 .portfolio .portfolio-filters {
   padding: 0;
   margin: 0 auto 20px auto;

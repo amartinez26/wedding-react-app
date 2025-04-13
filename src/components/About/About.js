@@ -4,13 +4,13 @@ import React from 'react'
 import SectionTitle from '../Shared/SectionTitle'
 import ProfileImage from './ProfileImage'
 import AboutContent from './AboutContent'
-import myProfileImg from '../../assets/img/profile-img.jpg'
+import myProfileImg from '../../assets/img/portfolio/WeddingShoot/pink wall.jpg'
 
 const About = () => {
   const sectionTitle = {
-    title: 'About',
+    title: 'Come for the vows, stay for the vibes!',
     description:
-      'Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.',
+      '"Pack your bags, dust off your passports, and get ready for the ultimate love-fueled getaway! We’re tying the knot in Puerto Morelos, Mexico—because why settle for a local wedding when you can have tacos, turquoise waters, and tequila? We’re beyond excited to celebrate our big day with all of you in paradise. Think of it as a mini vacation with a side of \'I do.\' So grab your sunscreen, practice your dance moves, and prepare for a wedding that’s as unforgettable as the sunsets in Puerto Morelos (and probably just as dramatic)."',
   }
 
   const profileImage = {
@@ -19,21 +19,21 @@ const About = () => {
   }
 
   const aboutContent = {
-    title: 'UI/UX Designer & Web Developer.',
+    title: 'Random Things You Never Asked to Know About Us!',
     description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+      'Study up—there might be a quiz, and maybe a prize. (Spoiler: there won’t be.)',
     details: [
       [
-        { label: 'Birthday', value: '1 May 1995' },
-        { label: 'Website', value: 'www.example.com' },
-        { label: 'Phone', value: '+123 456 7890' },
-        { label: 'City', value: 'New York, USA' },
+        { label: 'Birthdates', value: '9 Feb 1988 & 26 Dec 1988' },
+        { label: 'Companies', value: 'Airbnb & Ace Hardare' },
+        { label: 'Jobs', value: 'Industry Researcher & Software Engineer' },
+        { label: 'Residence', value: 'Little Village, Chicago' },
       ],
       [
-        { label: 'Age', value: '30' },
-        { label: 'Degree', value: 'Master' },
-        { label: 'Email', value: 'email@example.com' },
-        { label: 'Freelance', value: 'Available' },
+        { label: 'We Met', value: 'Hinge' },
+        { label: 'Length', value: '6 years' },
+        { label: 'Preferred Temp', value: '55 & 80' },
+        { label: 'Hobbies', value: 'Pottery & DJ' },
       ],
     ],
   }
