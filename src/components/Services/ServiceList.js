@@ -13,18 +13,28 @@
  */
 import React from 'react'
 import ServiceItem from './ServiceItem'
+import { Link } from 'react-router-dom'; // Import Link from React Router
 
 const ServiceList = ({ services }) => {
   return (
-    <div className="row gy-4">
+    <div className="row">
       {services.map((service, index) => (
-        <ServiceItem
+        <div
           key={index}
-          icon={service.icon}
-          title={service.title}
-          description={service.description}
-          delay={service.delay}
-        />
+          className="col-lg-4 col-md-6 d-flex align-items-stretch"
+          data-aos="fade-up"
+          data-aos-delay={service.delay}
+        >
+          <Link to={service.link} className="icon-box">
+            {' '}
+            {/* Use Link here */}
+            <div className="icon">
+              <i className={service.icon}></i>
+            </div>
+            <h4>{service.title}</h4>
+            <p>{service.description}</p>
+          </Link>
+        </div>
       ))}
     </div>
   )

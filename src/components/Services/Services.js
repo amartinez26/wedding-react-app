@@ -22,55 +22,61 @@ import ServiceList from './ServiceList'
 
 const Services = () => {
   const sectionTitle = {
-    title: 'Excursions',
+    title: 'Explore Around Mexico',
     description:
-      'Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.',
+      ' Click on the links below to explore all the amazing activities we’ve handpicked just for you to check out! ',
   }
 
-  const services = [
-    {
-      icon: 'bi bi-briefcase',
-      title: 'Lorem Ipsum',
-      description:
-        'Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident',
-      delay: 100,
-    },
-    {
-      icon: 'bi bi-card-checklist',
-      title: 'Dolor Sitema',
-      description:
-        'Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat tarad limino ata',
-      delay: 200,
-    },
-    {
-      icon: 'bi bi-bar-chart',
-      title: 'Sed ut perspiciatis',
-      description:
-        'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur',
-      delay: 300,
-    },
-    {
-      icon: 'bi bi-binoculars',
-      title: 'Magni Dolores',
-      description:
-        'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum',
-      delay: 400,
-    },
-    {
-      icon: 'bi bi-brightness-high',
-      title: 'Nemo Enim',
-      description:
-        'At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque',
-      delay: 500,
-    },
-    {
-      icon: 'bi bi-calendar4-week',
-      title: 'Eiusmod Tempor',
-      description:
-        'Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi',
-      delay: 600,
-    },
-  ]
+const services = [
+  {
+    icon: 'bi bi-briefcase',
+    title: 'Lorem Ipsum',
+    description:
+      'Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident',
+    delay: 100,
+    link: 'https://www.google.com', // Add the link for this service
+  },
+  {
+    icon: 'bi bi-card-checklist',
+    title: 'Dolor Sitema',
+    description:
+      'Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat tarad limino ata',
+    delay: 200,
+    link: '/dolor-sitema', // Add the link for this service
+  },
+  {
+    icon: 'bi bi-bar-chart',
+    title: 'Sed ut perspiciatis',
+    description:
+      'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur',
+    delay: 300,
+    link: '/sed-ut-perspiciatis', // Add the link for this service
+  },
+  {
+    icon: 'bi bi-binoculars',
+    title: 'Magni Dolores',
+    description:
+      'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum',
+    delay: 400,
+    link: '/magni-dolores', // Add the link for this service
+  },
+  {
+    icon: 'bi bi-brightness-high',
+    title: 'Nemo Enim',
+    description:
+      'At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque',
+    delay: 500,
+    link: '/nemo-enim', // Add the link for this service
+  },
+  {
+    icon: 'bi bi-calendar4-week',
+    title: 'Eiusmod Tempor',
+    description:
+      'Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi',
+    delay: 600,
+    link: '/eiusmod-tempor', // Add the link for this service
+  },
+]
 
   return (
     <section id="services" className="services section">

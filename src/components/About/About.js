@@ -10,7 +10,7 @@ const About = () => {
   const sectionTitle = {
     title: 'Come for the vows, stay for the vibes!',
     description:
-      '"Pack your bags, dust off your passports, and get ready for the ultimate love-fueled getaway! We’re tying the knot in Puerto Morelos, Mexico—because why settle for a local wedding when you can have tacos, turquoise waters, and tequila? We’re beyond excited to celebrate our big day with all of you in paradise. Think of it as a mini vacation with a side of \'I do.\' So grab your sunscreen, practice your dance moves, and prepare for a wedding that’s as unforgettable as the sunsets in Puerto Morelos (and probably just as dramatic)."',
+      '"Pack your bags, dust off your passports, and get ready for the ultimate wedding-fueled getaway! We’re tying the knot in Puerto Morelos, Mexico—because why settle for a local wedding when you can have tacos, turquoise waters, and tequila? We’re beyond excited to celebrate our big day with all of you in paradise. Think of it as a mini vacation with a side of \'I do.\' So grab your sunscreen, practice your dance moves, and prepare for a wedding that’s as unforgettable as the sunsets in Puerto Morelos (and probably just as dramatic)."',
   }
 
   const profileImage = {

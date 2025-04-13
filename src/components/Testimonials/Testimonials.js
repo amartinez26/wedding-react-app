@@ -28,39 +28,39 @@ const Testimonials = () => {
   const sectionTitle = {
     title: 'Testimonials',
     description:
-      'Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit',
+      'In case you needed more of a reason to come, but let’s be honest, you’re already coming.',
   }
 
   const testimonials = [
     {
-      text: 'Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.',
+      text: 'We had such a good time! The staff Victor at Indigo Pool, Jose at the Preferred Pool and Alfredo at the Hibachi all made our stay very enjoyable. Beds were comfy, food was good at all places we ate and we will be back. Thanks Dreams Staff, you are the best!',
       img: testimonial1Img, // Use the imported image
-      name: 'Saul Goodman',
-      title: 'Ceo & Founder',
+      name: 'Lisa Goodman',
+      title: 'April 2025 Guest',
     },
     {
-      text: 'Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.',
+      text: 'Fantastic resort. Excellent food. Eleuterio at Bordeaux restaurant was my favourite. Everything on the resort is easily accessible and their concerts were great too. The sky bar was something to see as well. Amazing views and worth experiencing!',
       img: testimonial2Img, // Use the imported image
-      name: 'Sara Wilsson',
-      title: 'Designer',
+      name: 'Gabe Betancourt',
+      title: 'April 2025 Guest',
     },
     {
-      text: 'Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.',
+      text: 'Alberto and his team, Omar, Geremias, and Martin gave us 10/10 service at the World Cafe. Made our experience incredible. Alberto is the best!!! Happy, energetic and everything you want in a server. The Resort overall was lovely. Good food. Clean. Good vibes. Would come back again.',
       img: testimonial3Img, // Use the imported image
-      name: 'Jena Karlis',
-      title: 'Store Owner',
+      name: 'Jena Reyes',
+      title: 'March 2025 Guest',
     },
     {
-      text: 'Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore illum veniam.',
+      text: "It's very nice place to go, very secure, the pool area has waiters/waitresses that come around, they have activities on and off at the pool area which was nice. They have entertainment in the evenings for people to enjoy also. It was a very nice place to stay! Highly recommend",
       img: testimonial4Img, // Use the imported image
-      name: 'Matt Brandon',
-      title: 'Freelancer',
+      name: 'Matt Harvey',
+      title: 'February 2025 Guest',
     },
     {
-      text: 'Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum quid.',
+      text: 'We were at Dreams Sapphire from February 20th to 27th, 2025. It was a very nice week. Beautiful spring very well maintained, very clean. Nice room and clean. Excellent service everywhere. All the staff at this place are wonderful and smiling. The staff seems happy to work at this hotel. The food is excellent. The Indigo section is a big wow with its beautiful pool and excellent service. Special thanks to Mr Armando Arroyo for your warm welcome. This place is a real favorite.',
       img: testimonial5Img, // Use the imported image
       name: 'John Larson',
-      title: 'Entrepreneur',
+      title: 'February 2025 Guest',
     },
   ]
 
