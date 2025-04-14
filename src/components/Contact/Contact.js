@@ -7,9 +7,9 @@ import HotelReservationLink from './HotelReservationLink'
 
 const Contact = () => {
   const sectionTitle = {
-    title: 'Contact',
+    title: 'RSVP HERE FIRST!',
     description:
-      'Click the link below to book your room and secure your spot in paradise!',
+      'Than click the link below to book your room and secure your spot in paradise!',
   }
 
   const infoItems = [
@@ -37,7 +37,34 @@ const Contact = () => {
   return (
     <section id="contact" className="contact section">
       <SectionTitle
-        title={sectionTitle.title}
+        title={
+          <a
+            href="https://docs.google.com/forms/d/e/1FAIpQLSfOXUVUafRevXEn6d86qdpfYlQemdSQc6w-QC79KLJ5p0NSVg/viewform?usp=sf_link"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{
+              display: 'inline-block',
+              padding: '10px 20px',
+              color: 'inherit', // White text for contrast
+              textDecoration: 'none',
+              borderRadius: '5px', // Rounded corners
+              fontWeight: 'bold',
+              textAlign: 'center',
+              cursor: 'pointer',
+              transition: 'background-color 1s ease',
+            }}
+            onMouseOver={(e) => {
+              e.target.style.backgroundColor = '	#E4007C' // Darker shade on hover
+              e.target.style.color = '#FFFFFF' // Change text color to white
+            }}
+            onMouseOut={(e) => {
+              e.target.style.backgroundColor = '#FFFFFF' // Original background color
+              e.target.style.color = 'black' // Change text color back to black
+            }}
+          >
+            {sectionTitle.title}
+          </a>
+        }
         description={sectionTitle.description}
       />
       <div className="container" data-aos="fade-up" data-aos-delay="100">
@@ -49,7 +76,7 @@ const Contact = () => {
               icon="bi bi-house-door"
               title="Reserve Your Hotel Room"
               link="https://requests.paradiseweddings.com/sites/carla-and-antonio/login"
-              description="We've secured special rates just for you!"
+              description="We've secured the best rates just for you!"
               delay={100}
             />
           </div>

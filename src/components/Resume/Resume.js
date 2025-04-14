@@ -21,60 +21,68 @@ import ResumeColumn from './ResumeColumn'
 
 const Resume = () => {
   const sectionTitle = {
-    title: 'Resume',
+    title: 'Q & A',
     description:
-      'Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.',
+      'Here are some general questions and answers that may help you.',
   }
 
   const leftColumn = [
     {
-      title: 'Brandon Johnson',
-      subtitle:
-        'Innovative and deadline-driven Graphic Designer with 3+ years of experience designing and developing user-centered digital/print marketing material from initial concept to final, polished deliverable.',
+      title: 'When should I book my room?',
+      description:
+        'The obvious answer is as soon as possible. Just keep in mind these important payment dates',
       list: [
-        'Portland par 127, Orlando, FL',
-        '(123) 456-7891',
-        'alice.barkley@example.com',
+        'October 2nd, 2025 - 1st and 2nd Deposits are due',
+        'December 2nd, 2025 - Final Payment is due',
       ],
     },
     {
-      title: 'Master of Fine Arts & Graphic Design',
-      date: '2015 - 2016',
-      subtitle: 'Rochester Institute of Technology, Rochester, NY',
+      title: 'Whats the Best way to book my Trip?',
       description:
-        'Qui deserunt veniam. Et sed aliquam labore tempore sed quisquam iusto autem sit. Ea vero voluptatum qui ut dignissimos deleniti nerada porti sand markend.',
+        "We've partnered with Paradise Weddings to help you book your trip. There travel agent is gauranteed to get yout he best price when your booking. They will also match any lower price you find from any reputable site.",
     },
     {
-      title: 'Bachelor of Fine Arts & Graphic Design',
-      date: '2010 - 2014',
-      subtitle: 'Rochester Institute of Technology, Rochester, NY',
+      title: 'Are Flights included with Reservation?',
       description:
-        'Quia nobis sequi est occaecati aut. Repudiandae et iusto quae reiciendis et quis. Eius vel ratione eius unde vitae rerum voluptates asperiores voluptatem.',
+        'Flights are not included with your hotel reservation. But the travel agent will help you book your flight along with your reservation.',
+    },
+    {
+      title: 'Should I bring a gift?',
+      description:
+        "Since your traveling for the wedding, were not expecting any gifts. Your Presense is enough!",
+    },
+    {
+      title: 'How far is the resort from the Cancun Airport?',
+      description:
+        "The resort is about 35 minutes from the Cancun Airport. The travel agent will help you book your transportation to and from the airport.",
     },
   ]
 
   const rightColumn = [
     {
-      title: 'Senior graphic design specialist',
-      date: '2019 - Present',
-      subtitle: 'Experion, New York, NY',
-      list: [
-        'Lead in the design, development, and implementation of the graphic, layout, and production communication materials.',
-        'Delegate tasks to the 7 members of the design team and provide counsel on all aspects of the project.',
-        'Supervise the assessment of all graphic materials in order to ensure quality and accuracy of the design.',
-        'Oversee the efficient use of production project budgets ranging from $2,000 - $25,000.',
-      ],
+      title: 'What should I wear to the wedding?',
+      description:
+        'The Ceremony is on the beach, so please wear something formal thats light and breezy. Ladies, you may want to bring flats or sandals. We want you to be comfortable!',
     },
     {
-      title: 'Graphic design specialist',
-      date: '2017 - 2018',
-      subtitle: 'Stepping Stone Advertising, New York, NY',
-      list: [
-        'Developed numerous marketing programs (logos, brochures, infographics, presentations, and advertisements).',
-        'Managed up to 5 projects or tasks at a given time while under pressure.',
-        'Recommended and consulted with clients on the most appropriate graphic design.',
-        'Created 4+ design presentations and proposals a month for clients and account managers.',
-      ],
+      title: 'Am I allowed to bring a plus one?',
+      description:
+        'Your wedding invitation will indicate the number of guests allowed to attend. If you are unsure, please reach out to us.',
+    },
+    {
+      title: 'What if i find a Cheaper Price online?',
+      description:
+        'As stated before but I really want to reiterate that the travel agent will match any price you find online from a reputable site. So please reach out to them before booking your trip.',
+    },
+    {
+      title: 'How do you get around once I am at the resort?',
+      description:
+        'More information to follow here. But the resort is all inclusive and has everything you need.',
+    },
+    {
+      title: 'Airport Tips?',
+      description:
+        "Tips to follow here. But the airport is very easy to navigate. Just make sure you have your passport and any other travel documents ready.",
     },
   ]
 
@@ -86,8 +94,8 @@ const Resume = () => {
       />
       <div className="container">
         <div className="row">
-          <ResumeColumn title="Summary & Education" items={leftColumn} />
-          <ResumeColumn title="Professional Experience" items={rightColumn} />
+          <ResumeColumn items={leftColumn} />
+          <ResumeColumn items={rightColumn} />
         </div>
       </div>
     </section>

@@ -29,7 +29,7 @@
 
 /* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
 :root {
-  --nav-color: #a8a9b4;  /* The default color of the main navmenu links */
+  --nav-color: #333333;  /* The default color of the main navmenu links */
   --nav-hover-color: #ffffff; /* Applied to main navmenu links when they are hovered over or active */
   --nav-mobile-background-color: #040b14; /* Used as the background color for mobile navigation menu */
   --nav-dropdown-background-color: #040b14; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
@@ -144,7 +144,7 @@ h6 {
 --------------------------------------------------------------*/
 .header {
   color: var(--default-color);
-  background-color: var(--background-color);
+  background-color: #B2AC88;
   position: fixed;
   top: 0;
   left: 0;
@@ -256,6 +256,7 @@ h6 {
 .navmenu {
   padding: 0;
   z-index: 9997;
+  
 }
 
 .navmenu ul {
@@ -354,12 +355,12 @@ h6 {
 }
 
 .navmenu .dropdown ul ul {
-  background-color: rgba(33, 37, 41, 0.1);
+  background-color: #B2AC88;
 }
 
 .navmenu .dropdown>.dropdown-active {
   display: block;
-  background-color: rgba(33, 37, 41, 0.03);
+  background-color: #B2AC88
 }
 
 /*--------------------------------------------------------------
@@ -1339,7 +1340,7 @@ section,
 }
 
 /*--------------------------------------------------------------
-# Starter Section Section
+# hotel Reservation Section Section
 --------------------------------------------------------------*/
 .hotel-reservation-link {
   text-align: center;
@@ -1376,7 +1377,7 @@ section,
 .hotel-reservation-link .reservation-link {
   display: inline-block;
   padding: 10px 20px;
-  background: #00A86B;
+  background: #B2AC88;
   color: #fff;
   border-radius: 5px;
   text-decoration: none;
@@ -1385,7 +1386,7 @@ section,
 }
 
 .hotel-reservation-link .reservation-link:hover {
-  background: #e04e1f;
+  background: #00A86B;
 }
 
 .hotel-reservation-link .hotel-name {
@@ -1402,4 +1403,55 @@ section,
   margin-bottom: 15px;
   border-radius: 8px; /* Optional: Add rounded corners */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow */
+}
+
+/*--------------------------------------------------------------
+# rsvp Section
+--------------------------------------------------------------*/
+.rsvp-button {
+  display: inline-block;
+  padding: 10px 20px;
+  color: 'inherit'; /* Default text color */
+  text-decoration: none;
+  border-radius: 5px; /* Rounded corners */
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 1s ease, color 0.3s ease; /* Smooth transition for background and text color */
+}
+
+.rsvp-button:hover {
+  background-color: #E4007C; /* Darker shade on hover */
+  color: #FFFFFF; /* Change text color to white on hover */
+}
+
+.play-music-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #E4007C; /* Elegant pink shade */
+  color: #FFFFFF; /* White text */
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 25px; /* Rounded button */
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth hover effect */
+}
+/*--------------------------------------------------------------
+# music button Section
+--------------------------------------------------------------*/
+
+.play-music-button:hover {
+  background-color: #C7006A; /* Slightly darker pink on hover */
+  transform: scale(1.05); /* Slight zoom effect */
+}
+
+.play-music-button:active {
+  transform: scale(0.95); /* Slight shrink effect on click */
+}
+
+.play-music-button:focus {
+  outline: none; /* Remove focus outline */
+  box-shadow: 0 0 0 3px rgba(228, 0, 124, 0.4); /* Add focus ring */
 }

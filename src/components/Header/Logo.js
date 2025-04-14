@@ -6,7 +6,7 @@
  *              the site name passed as a prop.
  */
 import React from 'react'
-import logo from '../../assets/img/logo.png'
+import logo from '../../assets/img/dance.png'
 
 const Logo = ({ siteName }) => {
   return (

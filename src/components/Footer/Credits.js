@@ -17,15 +17,13 @@ const Credits = ({
 }) => {
   return (
     <div className="credits">
-      All the links in the footer should remain intact. You can delete the links
-      only if you've purchased the pro version. Licensing information:{' '}
-      <a href={licenseUrl}>{licenseUrl}</a>
+      This site was rebuilt in React utilizing a Bootstrap
+      template. Customized to be used as a wedding site . Licensing information:{' '}
+      <a href={licenseUrl} target="_blank" rel="noopener noreferrer">{licenseUrl}</a>
       <br />
-      Purchase the pro version with working PHP/AJAX contact form:{' '}
-      <a href="[buy-url]">[buy-url]</a>
-      <br />
-      Designed by <a href={designUrl}>{designBy}</a> Distributed by{' '}
-      <a href={distributionUrl}>{distributedBy}</a>
+      Designed by Antonio Martinez Distributed by{' '}
+      <a href="https://bootstrapmade.com" target="_blank" rel="noopener noreferrer">BootstrapMade</a> and{' '}
+      <a href="https://themewagon.com" target="_blank" rel="noopener noreferrer">ThemeWagon</a>
     </div>
   )
 }

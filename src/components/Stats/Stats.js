@@ -15,25 +15,25 @@ const Stats = () => {
       icon: 'bi bi-credit-card',
       title: 'Days until',
       subtitle: '1st and 2nd Deposits are due',
-      targetDate: new Date('2025-10-02'), // Target date for this stat
+      targetDate: new Date('2025-10-03'), // Target date for this stat
     },
     {
       icon: 'bi bi-credit-card',
       title: 'Days until',
       subtitle: 'Final Payment is due',
-      targetDate: new Date('2025-12-02'), // Target date for this stat
+      targetDate: new Date('2025-12-03'), // Target date for this stat
     },
     {
       icon: 'bi bi-credit-card',
       title: 'Days until',
       subtitle: 'Flight info for transportation due',
-      targetDate: new Date('2026-01-11'), // Target date for this stat
+      targetDate: new Date('2026-01-12'), // Target date for this stat
     },
     {
       icon: 'bi bi-bell',
       title: 'Days until',
       subtitle: 'Wedding Day!',
-      targetDate: new Date('2026-02-27'), // Target date for this stat
+      targetDate: new Date('2026-02-28'), // Target date for this stat
     },
   ]
 

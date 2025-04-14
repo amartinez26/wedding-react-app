@@ -13,7 +13,6 @@
  */
 import React from 'react'
 import ServiceItem from './ServiceItem'
-import { Link } from 'react-router-dom'; // Import Link from React Router
 
 const ServiceList = ({ services }) => {
   return (
@@ -25,15 +24,18 @@ const ServiceList = ({ services }) => {
           data-aos="fade-up"
           data-aos-delay={service.delay}
         >
-          <Link to={service.link} className="icon-box">
-            {' '}
-            {/* Use Link here */}
+          <a
+            href={service.link}
+            className="icon-box"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <div className="icon">
               <i className={service.icon}></i>
             </div>
             <h4>{service.title}</h4>
             <p>{service.description}</p>
-          </Link>
+          </a>
         </div>
       ))}
     </div>

@@ -29,53 +29,53 @@ const Services = () => {
 
 const services = [
   {
-    icon: 'bi bi-briefcase',
-    title: 'Lorem Ipsum',
-    description:
-      'Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident',
-    delay: 100,
-    link: 'https://www.google.com', // Add the link for this service
-  },
-  {
-    icon: 'bi bi-card-checklist',
-    title: 'Dolor Sitema',
-    description:
-      'Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat tarad limino ata',
-    delay: 200,
-    link: '/dolor-sitema', // Add the link for this service
-  },
-  {
-    icon: 'bi bi-bar-chart',
-    title: 'Sed ut perspiciatis',
-    description:
-      'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur',
-    delay: 300,
-    link: '/sed-ut-perspiciatis', // Add the link for this service
-  },
-  {
     icon: 'bi bi-binoculars',
-    title: 'Magni Dolores',
+    title: 'Things to Do in Puerto Morelos',
     description:
-      'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum',
-    delay: 400,
-    link: '/magni-dolores', // Add the link for this service
+      "15 must-do experiences in Puerto Morelos, Mexico! From snorkeling with dolphins, ziplining adventures, ATV rides, exploring cenotes, here's ultimate guide to make your trip unforgettable.",
+    delay: 100,
+    link: 'https://www.tripadvisor.com/Attractions-g240327-Activities-Puerto_Morelos_Yucatan_Peninsula.html', // Add the link for this service
   },
   {
-    icon: 'bi bi-brightness-high',
-    title: 'Nemo Enim',
+    icon: 'bi bi-brush',
+    title: 'Local Art and Culture',
     description:
-      'At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque',
-    delay: 500,
-    link: '/nemo-enim', // Add the link for this service
+      'For the artist in you, here are the local spots where art and culture come alive! From the vibrant Galería Arte Zissimo to the charming Alma Libre Bookstore, every corner is packed with creativity and stories waiting to be discovered.',
+    delay: 200,
+    link: 'https://www.tripadvisor.com/Collections-e3ldgS5Gk55p4qnVzsdgusu.html', // Add the link for this service
   },
   {
-    icon: 'bi bi-calendar4-week',
-    title: 'Eiusmod Tempor',
+    icon: 'bi bi-cart',
+    title: 'Shopping in Playa del Carmen',
     description:
-      'Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi',
-    delay: 600,
-    link: '/eiusmod-tempor', // Add the link for this service
+      'Not to far is Playa del Carmen, a shopper’s paradise! offering everything from high-end boutiques to local artisan markets. Explore the vibrant Fifth Avenue for trendy shops, or visit the local markets for unique souvenirs.',
+    delay: 300,
+    link: 'https://www.tripadvisor.com/Attractions-g150812-Activities-c26-Playa_del_Carmen_Yucatan_Peninsula.html', // Add the link for this service
   },
+  // {
+  //   icon: 'bi bi-briefcase',
+  //   title: 'Magni Dolores',
+  //   description:
+  //     'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum',
+  //   delay: 400,
+  //   link: '/magni-dolores', // Add the link for this service
+  // },
+  // {
+  //   icon: 'bi bi-brightness-high',
+  //   title: 'Nemo Enim',
+  //   description:
+  //     'At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque',
+  //   delay: 500,
+  //   link: '/nemo-enim', // Add the link for this service
+  // },
+  // {
+  //   icon: 'bi bi-calendar4-week',
+  //   title: 'Eiusmod Tempor',
+  //   description:
+  //     'Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi',
+  //   delay: 600,
+  //   link: '/eiusmod-tempor', // Add the link for this service
+  // },
 ]
 
   return (

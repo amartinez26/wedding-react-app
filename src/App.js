@@ -23,11 +23,11 @@ function App() {
           <About />
           <Stats />
           {/* <Skills /> */}
-          {/* <Resume /> */}
           <Portfolio />
           <Services />
           <Testimonials />
           <Contact />
+          <Resume />
         </main>
 
         <Footer />
