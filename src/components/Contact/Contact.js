@@ -42,25 +42,7 @@ const Contact = () => {
             href="https://docs.google.com/forms/d/e/1FAIpQLSfOXUVUafRevXEn6d86qdpfYlQemdSQc6w-QC79KLJ5p0NSVg/viewform?usp=sf_link"
             target="_blank"
             rel="noopener noreferrer"
-            style={{
-              display: 'inline-block',
-              padding: '10px 20px',
-              color: 'inherit', // White text for contrast
-              textDecoration: 'none',
-              borderRadius: '5px', // Rounded corners
-              fontWeight: 'bold',
-              textAlign: 'center',
-              cursor: 'pointer',
-              transition: 'background-color 1s ease',
-            }}
-            onMouseOver={(e) => {
-              e.target.style.backgroundColor = '	#E4007C' // Darker shade on hover
-              e.target.style.color = '#FFFFFF' // Change text color to white
-            }}
-            onMouseOut={(e) => {
-              e.target.style.backgroundColor = '#FFFFFF' // Original background color
-              e.target.style.color = 'black' // Change text color back to black
-            }}
+            className="rsvp-button" // Apply the CSS class
           >
             {sectionTitle.title}
           </a>

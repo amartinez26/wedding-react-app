@@ -1405,6 +1405,44 @@ section,
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow */
 }
 
+.reservation-link {
+  display: inline-block;
+  padding: 15px 25px; /* Larger padding for easier tapping */
+  background-color: #00A86B; /* Elegant jade green */
+  color: #FFFFFF; /* White text for contrast */
+  font-size: 18px; /* Slightly larger font size for readability */
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none; /* Remove underline */
+  border-radius: 30px; /* Rounded corners for a modern look */
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth hover effect */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.reservation-link:hover {
+  background-color: #008F5E; /* Slightly darker jade green on hover */
+  transform: scale(1.05); /* Slight zoom effect */
+}
+
+.reservation-link:active {
+  transform: scale(0.95); /* Slight shrink effect on click */
+}
+
+.reservation-link:focus {
+  outline: none; /* Remove focus outline */
+  box-shadow: 0 0 0 3px rgba(0, 168, 107, 0.4); /* Add focus ring for accessibility */
+}
+
+/* Mobile-specific styles */
+@media (max-width: 768px) {
+  .reservation-link {
+    width: 100%; /* Make the button full-width on smaller screens */
+    padding: 15px; /* Adjust padding for mobile */
+    font-size: 16px; /* Slightly smaller font size for mobile */
+  }
+}
+
 /*--------------------------------------------------------------
 # rsvp Section
 --------------------------------------------------------------*/
@@ -1425,6 +1463,47 @@ section,
   color: #FFFFFF; /* Change text color to white on hover */
 }
 
+.rsvp-button {
+  display: inline-block;
+  padding: 15px 25px; /* Larger padding for easier tapping */
+  background-color: #e4007c; /* Elegant pink shade */
+  color: #ffffff; /* White text for contrast */
+  font-size: 18px; /* Slightly larger font size for readability */
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none; /* Remove underline */
+  border-radius: 30px; /* Rounded corners for a modern look */
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth hover effect */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.rsvp-button:hover {
+  background-color: #c7006a; /* Slightly darker pink on hover */
+  transform: scale(1.05); /* Slight zoom effect */
+}
+
+.rsvp-button:active {
+  transform: scale(0.95); /* Slight shrink effect on click */
+}
+
+.rsvp-button:focus {
+  outline: none; /* Remove focus outline */
+  box-shadow: 0 0 0 3px rgba(228, 0, 124, 0.4); /* Add focus ring for accessibility */
+}
+
+/* Mobile-specific styles */
+@media (max-width: 768px) {
+  .rsvp-button {
+    width: 100%; /* Make the button full-width on smaller screens */
+    padding: 15px; /* Adjust padding for mobile */
+    font-size: 16px; /* Slightly smaller font size for mobile */
+  }
+}
+
+/*--------------------------------------------------------------
+# music button Section
+--------------------------------------------------------------*/
 .play-music-button {
   display: inline-block;
   padding: 10px 20px;
@@ -1438,9 +1517,6 @@ section,
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
   transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth hover effect */
 }
-/*--------------------------------------------------------------
-# music button Section
---------------------------------------------------------------*/
 
 .play-music-button:hover {
   background-color: #C7006A; /* Slightly darker pink on hover */
