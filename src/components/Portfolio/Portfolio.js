@@ -243,7 +243,7 @@ const Portfolio = () => {
                   <div
                     className="portfolio-image-wrapper"
                     style={{ position: 'relative', cursor: 'pointer' }}
-                    onClick={() => window.open(item.img, '_blank')} // Fallback to open in a new tab
+                    // onClick={() => window.open(item.img, '_blank')} // Fallback to open in a new tab
                   >
                     <img
                       src={item.img}
