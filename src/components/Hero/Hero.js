@@ -11,7 +11,7 @@
 import React from 'react'
 import HeroImage from './HeroImage'
 import HeroTitle from './HeroTitle'
-import heroBg from '../../assets/img/portfolio/WeddingShoot/running-mega-mall.jpg' // Adjust the path as needed
+import heroBg from '../../assets/img/portfolio/WeddingShoot/running-mega-mall.webp' // Adjust the path as needed
 
 
 const Hero = () => {

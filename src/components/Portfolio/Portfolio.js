@@ -243,12 +243,14 @@ const Portfolio = () => {
                   <div
                     className="portfolio-image-wrapper"
                     style={{ position: 'relative', cursor: 'pointer' }}
+                    onClick={() => window.open(item.img, '_blank')} // Fallback to open in a new tab
                   >
                     <img
                       src={item.img}
                       alt={item.title}
                       className="portfolio-image"
                       loading="lazy"
+                      onLoad={(e) => e.target.classList.add('loaded')} // Add a class when the image is loaded
                       style={{
                         width: '100%',
                         height: 'auto',

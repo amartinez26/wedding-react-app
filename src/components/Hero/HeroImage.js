@@ -1,5 +1,6 @@
 
-
+import { LazyLoadImage } from 'react-lazy-load-image-component'
+import 'react-lazy-load-image-component/src/effects/blur.css'
 /**
  * HeroImage component renders an image with optional AOS (Animate On Scroll) animation attributes.
  *
@@ -10,7 +11,15 @@
  * @returns {JSX.Element} The rendered image component.
  */
 const HeroImage = ({ src, alt, aos }) => {
-  return <img src={src} alt={alt} data-aos={aos} className="" />
+  return (
+    <LazyLoadImage
+      src={src}
+      alt={alt}
+      data-aos={aos}
+      loading="lazy"
+      className=""
+    />
+  )
 }
 
 export default HeroImage
