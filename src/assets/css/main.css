@@ -246,6 +246,47 @@ h6 {
   background-color: color-mix(in srgb, var(--accent-color) 90%, white 15%);
 }
 
+/* General styles for the toggle button */
+.header-toggle {
+  font-size: 2rem; /* Increase icon size */
+  color: white; /* Ensure the icon is visible */
+  background-color: rgba(0, 0, 0, 0.5); /* Add a subtle background for better visibility */
+  border-radius: 50%; /* Make it circular */
+  padding: 10px; /* Add padding for a larger touch area */
+  cursor: pointer; /* Ensure it looks clickable */
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Add hover and click effects */
+}
+
+/* Hover Effect */
+.header-toggle:hover {
+  background-color: rgba(255, 255, 255, 0.2); /* Change background on hover */
+  transform: scale(1.1); /* Slight zoom effect */
+}
+
+/* Focus Effect (for accessibility) */
+.header-toggle:focus {
+  outline: none; /* Remove default outline */
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.5); /* Add a focus ring */
+}
+
+/* Styles for the open state (menu is open) */
+.header-toggle.bi-x {
+  background-color: rgba(255, 0, 0, 0.5); /* Example: Red background for open state */
+}
+
+/* Styles for the closed state (menu is closed) */
+.header-toggle.bi-list {
+  background-color: rgba(236, 137, 7, 0.5); /* Example: Black background for closed state */
+}
+
+/* Mobile-Specific Adjustments */
+@media (max-width: 768px) {
+  .header-toggle {
+    font-size: 2.5rem; /* Slightly larger icon for smaller screens */
+    padding: 15px; /* Increase touch area */
+  }
+}
+
 /*--------------------------------------------------------------
 # Navigation Menu
 --------------------------------------------------------------*/
@@ -1274,6 +1315,82 @@ section,
   color: color-mix(in srgb, var(--default-color), transparent 30%);
 }
 
+.portfolio-item {
+  text-align: center;
+  padding: 20px;
+}
+
+.portfolio-image {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.portfolio-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 10px;
+  color: #333;
+}
+
+.portfolio-description {
+  font-size: 14px;
+  color: #666;
+  margin-top: 5px;
+}
+
+.portfolio-item img {
+  width: 100%; /* Ensures the image takes up the full width of its container */
+  height: auto; /* Maintains the aspect ratio */
+  object-fit: contain; /* Ensures the entire image is visible without being cropped */
+  border-radius: 10px; /* Optional: Adds rounded corners */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Adds a subtle shadow */
+}
+
+@media (max-width: 768px) {
+  .portfolio-item img {
+    width: 100%; /* Ensures responsiveness on smaller screens */
+    height: auto; /* Maintains aspect ratio */
+  }
+}
+
+/* Wrapper for the portfolio image */
+.portfolio-image-wrapper {
+  position: relative;
+  cursor: pointer;
+  display: inline-block; /* Ensure the wrapper only takes up the size of the image */
+}
+
+/* Hide the magnify icon by default */
+.magnify-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2rem;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  padding: 10px;
+  opacity: 0; /* Initially hidden */
+  transition: opacity 0.3s ease; /* Smooth fade-in effect */
+  pointer-events: none; /* Prevent the icon from interfering with hover detection */
+}
+
+/* Show the magnify icon only when hovering over the image */
+.portfolio-image-wrapper:hover .magnify-icon {
+  opacity: 1; /* Make the icon visible */
+}
+
+/* Ensure the image fills the wrapper and maintains its aspect ratio */
+.portfolio-image-wrapper img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 10px; /* Optional: Adds rounded corners */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Adds a subtle shadow */
+}
 /*--------------------------------------------------------------
 # Service Details Section
 --------------------------------------------------------------*/

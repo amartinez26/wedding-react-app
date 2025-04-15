@@ -98,8 +98,12 @@ const Header = () => {
       {/* Toggle Button */}
       <i
         className={`header-toggle bi ${isMenuOpen ? 'bi-x' : 'bi-list'}`}
-        onClick={toggleMenu} // Add click handler
+        onClick={toggleMenu}
+        aria-label={isMenuOpen ? 'Close Menu' : 'Open Menu'} // Add accessibility label
+        role="button" // Explicitly define it as a button for accessibility
+        tabIndex="0" // Make it focusable for keyboard navigation
       ></i>
+      
 
       {/* Profile Image */}
       <ProfileImage src={profileImg} alt="Profile" />

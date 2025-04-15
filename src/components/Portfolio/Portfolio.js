@@ -27,13 +27,18 @@ import WeddingShootImage2 from '../../assets/img/portfolio/WeddingShoot/grocery-
 import WeddingShootImage3 from '../../assets/img/portfolio/WeddingShoot/mall.jpg'
 import WeddingShootImage4 from '../../assets/img/portfolio/WeddingShoot/profile-img.jpg'
 import WeddingShootImage5 from '../../assets/img/portfolio/WeddingShoot/virgen.jpg'
+import Slider from 'react-slick'
+import { PhotoProvider, PhotoView } from 'react-photo-view'
+import 'react-photo-view/dist/react-photo-view.css'
+import 'slick-carousel/slick/slick.css'
+import 'slick-carousel/slick/slick-theme.css'
 
 
 const Portfolio = () => {
   const sectionTitle = {
     title: 'Photo Gallery',
     description:
-      '"Take a scroll through our photo gallery—wedding shoots where we nailed the \'in love\' look, a proposal in Spain that screams \'Pinterest goals,\' and travel pics proving we\’re basically a rom-com on the go."',
+      "\"Take a scroll through our photo gallery—wedding shoots where we nailed the 'in love' look, a proposal in Spain that screams 'Pinterest goals,' and travel pics proving we’re basically a rom-com on the go.\"",
   }
 
   const filters = [
@@ -48,26 +53,26 @@ const Portfolio = () => {
     {
       filter: 'filter-WS',
       img: WeddingShootImage1,
-      title: 'New Year New US',
-      description: 'In a castle in Barcelona',
+      title: 'Groceries',
+      description: 'Picking out Peppers',
     },
     {
       filter: 'filter-WS',
       img: WeddingShootImage2,
-      title: 'New Year New US',
-      description: 'In a castle in Barcelona',
+      title: 'Soda Aisle',
+      description: 'Our song was on',
     },
     {
       filter: 'filter-WS',
       img: WeddingShootImage3,
-      title: 'New Year New US',
-      description: 'In a castle in Barcelona',
+      title: 'Mega Mall',
+      description: 'Novela Material',
     },
     {
       filter: 'filter-WS',
       img: WeddingShootImage4,
-      title: 'New Year New US',
-      description: 'In a castle in Barcelona',
+      title: 'the best hats around',
+      description: 'This may be a permanent look',
     },
     {
       filter: 'filter-WS',
@@ -193,6 +198,8 @@ const Portfolio = () => {
 
   // State to track the active filter
   const [activeFilter, setActiveFilter] = useState('*')
+  const [isLightboxOpen, setIsLightboxOpen] = useState(false)
+  const [currentImageIndex, setCurrentImageIndex] = useState(0)
 
   // Filtered portfolio items based on the active filter
   const filteredItems =
@@ -203,6 +210,18 @@ const Portfolio = () => {
   // Handle filter change
   const handleFilterChange = (filter) => {
     setActiveFilter(filter)
+  }
+
+  // React Slick settings
+  const settings = {
+    dots: true, // Show navigation dots
+    infinite: true, // Infinite scrolling
+    speed: 500, // Transition speed
+    slidesToShow: 1, // Show one slide at a time
+    slidesToScroll: 1, // Scroll one slide at a time
+    autoplay: true, // Enable autoplay
+    autoplaySpeed: 3000, // Autoplay interval (3 seconds)
+    arrows: true, // Show navigation arrows
   }
 
   return (
@@ -216,7 +235,51 @@ const Portfolio = () => {
           filters={filters}
           onFilterChange={handleFilterChange}
         />
-        <PortfolioItems items={filteredItems} />
+        <PhotoProvider>
+          <Slider {...settings}>
+            {filteredItems.map((item, index) => (
+              <div key={index} className="portfolio-item">
+                <PhotoView src={item.img}>
+                  <div
+                    className="portfolio-image-wrapper"
+                    style={{ position: 'relative', cursor: 'pointer' }}
+                  >
+                    <img
+                      src={item.img}
+                      alt={item.title}
+                      className="portfolio-image"
+                      loading="lazy"
+                      style={{
+                        width: '100%',
+                        height: 'auto',
+                        borderRadius: '10px',
+                        boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
+                      }}
+                    />
+                    <div
+                      className="magnify-icon"
+                      style={{
+                        position: 'absolute',
+                        top: '50%',
+                        left: '50%',
+                        transform: 'translate(-50%, -50%)',
+                        fontSize: '2rem',
+                        color: 'white',
+                        backgroundColor: 'rgba(0, 0, 0, 0.5)',
+                        borderRadius: '50%',
+                        padding: '10px',
+                      }}
+                    >
+                      🔍
+                    </div>
+                  </div>
+                </PhotoView>
+                <h4 className="portfolio-title">{item.title}</h4>
+                <p className="portfolio-description">{item.description}</p>
+              </div>
+            ))}
+          </Slider>
+        </PhotoProvider>
       </div>
     </section>
   )

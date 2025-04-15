@@ -39,7 +39,7 @@ const Resume = () => {
     {
       title: 'Whats the Best way to book my Trip?',
       description:
-        "We've partnered with Paradise Weddings to help you book your trip. There travel agent is gauranteed to get yout he best price when your booking. They will also match any lower price you find from any reputable site.",
+        "We've partnered with Paradise Weddings to help you book your trip. There travel agent is gauranteed to get you the best price when your booking. They will also match any lower price you find from any reputable site.",
     },
     {
       title: 'Are Flights included with Reservation?',
