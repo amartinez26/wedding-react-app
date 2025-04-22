@@ -52,14 +52,14 @@ const services = [
     delay: 300,
     link: 'https://www.tripadvisor.com/Attractions-g150812-Activities-c26-Playa_del_Carmen_Yucatan_Peninsula.html', // Add the link for this service
   },
-  // {
-  //   icon: 'bi bi-briefcase',
-  //   title: 'Magni Dolores',
-  //   description:
-  //     'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum',
-  //   delay: 400,
-  //   link: '/magni-dolores', // Add the link for this service
-  // },
+  {
+    icon: 'bi bi-briefcase',
+    title: 'Paradise Weddings Partners',
+    description:
+      'Check out our website where you can reserve any excursions or also contact us directly for assistance, and we will be glad to verify availability according to the dates and the number of people',
+    delay: 400,
+    link: 'https://playadelcarmen.com/activities', // Add the link for this service
+  },
   // {
   //   icon: 'bi bi-brightness-high',
   //   title: 'Nemo Enim',
