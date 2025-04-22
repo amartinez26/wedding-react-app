@@ -77,8 +77,8 @@ const Portfolio = () => {
     {
       filter: 'filter-WS',
       img: WeddingShootImage5,
-      title: 'New Year New US',
-      description: 'In a castle in Barcelona',
+      title: 'Virgen Mural',
+      description: 'Don\'t mind the parking box',
     },
     {
       filter: 'filter-proposal',

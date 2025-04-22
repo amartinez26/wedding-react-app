@@ -16,10 +16,10 @@
  */
 import React from 'react'
 
-const ProfileImage = ({ src, alt }) => {
+const ProfileImage = ({ src, alt, loading = 'lazy'}) => {
   return (
     <div className="profile-img">
-      <img src={src} alt={alt} className="img-fluid rounded-circle" />
+      <img src={src} alt={alt} loading={loading} className="img-fluid rounded-circle" />
     </div>
   )
 }

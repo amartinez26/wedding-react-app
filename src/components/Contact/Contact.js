@@ -22,14 +22,14 @@ const Contact = () => {
     },
     {
       icon: 'bi bi-telephone',
-      title: 'Call Us',
-      content: '+1 5589 55488 55',
+      title: 'Questions? Call Vicky!',
+      content: '877-737-0177 (option 2) - 8 AM to 5 PM EST',
       delay: 300,
     },
     {
       icon: 'bi bi-envelope',
-      title: 'Email Us',
-      content: 'info@example.com',
+      title: 'Email Paradise Weddings',
+      content: 'guests@paradiseweddings.com',
       delay: 400,
     },
   ]

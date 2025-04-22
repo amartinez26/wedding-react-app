@@ -92,21 +92,20 @@ const Header = () => {
         <source src={backgroundMusic} type="audio/mpeg" />
         Your browser does not support the audio element.
       </audio>
-      <button className="play-music-button" onClick={toggleAudio}>
-        {isPlaying ? '⏸ Stop Music' : '🎵 Play Music'}
-      </button>
-      {/* Toggle Button */}
-      <i
-        className={`header-toggle bi ${isMenuOpen ? 'bi-x' : 'bi-list'}`}
-        onClick={toggleMenu}
-        aria-label={isMenuOpen ? 'Close Menu' : 'Open Menu'} // Add accessibility label
-        role="button" // Explicitly define it as a button for accessibility
-        tabIndex="0" // Make it focusable for keyboard navigation
-      ></i>
-      
-
+      <div className="header-controls">
+        <button className="play-music-button" onClick={toggleAudio}>
+          {isPlaying ? '⏸ Stop Music' : '🎵 Play Music'}
+        </button>
+        <i
+          className={`header-toggle bi ${isMenuOpen ? 'bi-x' : 'bi-list'}`}
+          onClick={toggleMenu}
+          aria-label={isMenuOpen ? 'Close Menu' : 'Open Menu'}
+          role="button"
+          tabIndex="0"
+        ></i>
+      </div>
       {/* Profile Image */}
-      <ProfileImage src={profileImg} alt="Profile" />
+      <ProfileImage src={profileImg} alt="Profile" loading="lazy" />
 
       {/* Logo */}
       <Logo siteName="Carla & Tony" />

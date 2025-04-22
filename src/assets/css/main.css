@@ -287,6 +287,42 @@ h6 {
   }
 }
 
+/* Style for the Play Music button */
+.play-music-button {
+  position: fixed; /* Make it float on the page */
+  top: 15px; /* Position it near the top */
+  right: 70px; /* Position it to the left of the toggle menu icon */
+  z-index: 9999; /* Ensure it stays on top of other elements */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+  background-color: rgba(228, 0, 124, 0.5); /* Translucent pink background */
+  color: #FFFFFF; /* White text */
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 25px; /* Rounded button */
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  transition: background-color 0.3s ease, transform 0.2s ease, opacity 0.3s ease; /* Smooth hover effect */
+  opacity: 0.7; /* Slightly translucent by default */
+}
+
+.play-music-button:hover {
+  background-color: #C7006A; /* Slightly darker pink on hover */
+  transform: scale(1.05); /* Slight zoom effect */
+  opacity: 1; /* Fully opaque on hover */
+}
+
+.play-music-button:active {
+  transform: scale(0.95); /* Slight shrink effect on click */
+}
+
+.play-music-button:focus {
+  outline: none; /* Remove focus outline */
+  box-shadow: 0 0 0 3px rgba(228, 0, 124, 0.4); /* Add focus ring */
+}
 /*--------------------------------------------------------------
 # Navigation Menu
 --------------------------------------------------------------*/
